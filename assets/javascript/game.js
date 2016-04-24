@@ -1,3 +1,5 @@
+// This function wraps everything
+
 $(document).ready(function(){
 
 	var crystalGame = {
@@ -7,70 +9,59 @@ $(document).ready(function(){
 		userstart = 0,
 		computerStart= 39,
 
-
-		crystal1 = $('#crystals'),  
-		crystalGroup1 : {				{
-			startPoints: 0,
-			hitPoints1: 0,
-			image: "<img class='gemPic' src='assets/images/blue.png'>",
-		},
-		crystal1.append(crystalGroup1),
-
-		crystal2: {
-			startPoints = 0,
-			hitPoints2 = 0,
-			image: "<img class='gemPic' src='assets/images/green.png'>"},			
-		crystal3: {
-			startPoints = 0,
-			hitPoints3 = 0,
-			image: "<img class='gemPic' src='assets/images/orange.png'>"},
-		crystal4: {
-			startPoints = 0,
-			hitPoints4 = 0,
-			image: "<img class='gemPic' src='assets/images/purple.png'>"},
+		CrystalsMain : [{
+			crystal1: {
+				startPoints = 0,
+				hitPoints1 = 0,
+				image: "<img class='gemPic' src='assets/images/blue.png'>"},
+			crystal2: {
+				startPoints = 0,
+				hitPoints2 = 0,
+				image: "<img class='gemPic' src='assets/images/green.png'>"},			
+			crystal3: {
+				startPoints = 0,
+				hitPoints3 = 0,
+				image: "<img class='gemPic' src='assets/images/orange.png'>"},
+			crystal4: {
+				startPoints = 0,
+				hitPoints4 = 0,
+				image: "<img class='gemPic' src='assets/images/purple.png'>"}
+		}],
+		CrystalsMain = $('#crystals'),
 		
+		// sets up game	
 		setupGame: function () {
-			// random number picked
-		this.randomCrystalScore1 = (Math.floor(Math.random() * 12));
-		this.randomCrystalScore2 = (Math.floor(Math.random() * 12));
-		this.randomCrystalScore3 = (Math.floor(Math.random() * 12));
-		this.randomCrystalScore4 = (Math.floor(Math.random() * 12));
-		this.hitPoints1 = randomCrystalScore1;
-		this.hitPoints2 = randomCrystalScore2;
-		this.hitPoints3 = randomCrystalScore3;
-		this.hitPoints4 = randomCrystalScore4;
+
+			this.complete =  false;
+			// random number picked for each crystal
+			this.randomCrystalScore1 = (Math.floor(Math.random() * 12));
+			this.randomCrystalScore2 = (Math.floor(Math.random() * 12));
+			this.randomCrystalScore3 = (Math.floor(Math.random() * 12));
+			this.randomCrystalScore4 = (Math.floor(Math.random() * 12));
+			this.hitPoints1 = randomCrystalScore1;
+			this.hitPoints2 = randomCrystalScore2;
+			this.hitPoints3 = randomCrystalScore3;
+			this.hitPoints4 = randomCrystalScore4;
+		},
+		
+		//How the score is caluclated when a crystal is picked
+		startScore: function (numberChoice) {
+			
+			computerStart - hitPoints1 || computerStart - hitPoints2 computerStart - hitPoints3 || computerStart - hitPoints4; 
 		}
-
-		startScore: function () {
-			if ()
-
+		
+		//determine if win or lose
+		winLose: function () {
+			if (computerStart == 0) {win++}
+			else (computerStart < 0) {loses--}
 		}
-		}
-	
-
-
-
-
-
-	// 	}
-
-	// 		setupGame: function() {
-	// 	// ---Pick a random word
-	// 	var objKeys = Object.keys(this.wordsToPick);
-	// 	this.wordInPlay = objKeys[Math.floor(Math.random() * objKeys.length)];
-
-	// 	this.lettersOfTheWord = this.wordInPlay.split('');
-	// 	this.rebuildWordView();
-	// 	this.processUpdateTotalGuesses();
-	
-	// }
-
+	}
 
 })
 
 hangmanGame.setupGame();
 
-      document.onkeyup = function(event) {
+      document.onkeyup = function(numberChoice) {
         crystalGame.numberChoice = String.fromCharCode(event.keyCode).;
         crystalGame.startGame(crystalGame.numberChoice);
 }
