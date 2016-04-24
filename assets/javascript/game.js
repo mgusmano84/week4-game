@@ -8,7 +8,7 @@ $(document).ready(function(){
 		loses = 0,
 		userstart = 0,
 		computerStart= 39,
-
+		//This is the selection of 4 crystals
 		CrystalsMain : [{
 			crystal1: {
 				startPoints = 0,
