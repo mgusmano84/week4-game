@@ -2,22 +2,23 @@ var crystalGame = {
 	
 	this.wins = 0;
 	this.loses = 0;
+	this.crystal1 = 0;
+	this.crystal2 = 0;
+	this.crystal3 = 0;
+	this.crystal4 = 0;
+	this.randomCrystalScore = (Math.floor(Math.random() * 12));
 
-	start: function() {
-		this.crystal1 = 0;
-		this.crystal2 = 0;
-		this.crystal3 = 0;
-		this.crystal4 = 0;
-		this.randomCrystalScore = (Math.floor(Math.random() * 12));
-			$("score").html(randomCrystalScore);
+
+	startGame: function(numberChoice) {
+			
 	}
 
 }
 
 crystalGame.start();
       document.onkeyup = function(event) {
-        var number = String.fromCharCode(event.keyCode).;
-        crystalGame.choice(number);
+        crystalGame.numberChoice = String.fromCharCode(event.keyCode).;
+        crystalGame.startGame(crystalGame.numberChoice);
 }
 
 
