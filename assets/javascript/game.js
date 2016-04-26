@@ -46,9 +46,23 @@ $(document).ready(function(){
 		
 		//How the score is caluclated when a crystal is picked
 		startScore: function (numberChoice) {
+						$( ".crystal1" ).click(function() {
+			  alert( "I think unicorns are kick ass!" );
+			});
+			$( ".crystal2" ).click(function() {
+			  alert( "I think unicorns are kick ass!" );
+			});
+			$( ".crystal3" ).click(function() {
+			  alert( "I think unicorns are kick ass!" );
+			});
+			$( ".crystal4" ).click(function() {
+			  alert( "I think unicorns are kick ass!" );
+			});
 			
 			computerStart - hitPoints1 || computerStart - hitPoints2 computerStart - hitPoints3 || computerStart - hitPoints4; 
 		}
+
+
 		
 		//determine if win or lose
 		winLose: function () {
@@ -59,7 +73,7 @@ $(document).ready(function(){
 
 })
 
-hangmanGame.setupGame();
+crystalGame.setupGame();
 
       document.onkeyup = function(numberChoice) {
         crystalGame.numberChoice = String.fromCharCode(event.keyCode).;
@@ -71,12 +85,7 @@ hangmanGame.setupGame();
 	
 
 
-		
-	// }
 
-// document.onkeyup = function(event) {
-// 	hangmanGame.letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-// 	hangmanGame.updatePage(hangmanGame.letterGuessed);
 
 // startGame: function(numberChoice) {
 				
