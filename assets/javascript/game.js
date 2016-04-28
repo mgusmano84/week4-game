@@ -3,11 +3,11 @@
 $(document).ready(function () {
 
 
-	var crystalGame = {
+	
 
-		wins: 0,
-		loses: 0,
-		userstart: 0,
+		wins: 0;
+		loses: 0;
+		userstart: 0;
 		//This is the selection of 4 crystals
 		// CrystalsMain : [
 		// 	crystal1 = {
@@ -24,13 +24,13 @@ $(document).ready(function () {
 		// 		hitPoints4: 0}
 		// ],
 
-		gameCheck: function compNumber() {
-			return Math.floor(Math.random() * 99);
-			var randComp = compNumber;
-			$('#score').html('<h3>' + compNumber+ '</h3>');
+		function compNumber(num) {
+			return Math.floor(Math.random() * 26 +num)
+		};
+			var randComp = compNumber(25);
+			$('#score').html('<h3>' + randComp+ '</h3>');
 			console.log(randComp);
-			compNumber();
-		},
+					
 		
 
 		// $("#gem1").on("click", function () {
@@ -72,7 +72,7 @@ $(document).ready(function () {
 		// 	});
 			
 		// 	computerStart - hitPoints1 || computerStart - hitPoints2 computerStart - hitPoints3 || computerStart - hitPoints4; 
-	},
+	
 
 });
 		
