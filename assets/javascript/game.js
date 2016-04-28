@@ -52,15 +52,30 @@ $(document).ready(function () {
 		//determine if win or lose
 		function winOrLose() {
 			if (userStart == randComp) {wins1++;
-			$('#wins').html("<h4>" + wins1 + "</h4>")};
-			refresh()
+			$('#wins').html("<h4>" + wins1 + "</h4>");
+			alert("You Win!");
+			userStart=0;
+			$('#userscore').html('<h3>' +userStart+ '</h3>');
+			refresh();
+			};	
+			
 
 			if (userStart > randComp) {loses1++;
-			$('#loses').html("<h4>" + loses1 + "</h4>")};
-			refresh()
+			$('#loses').html("<h4>" + loses1 + "</h4>")
+			alert("You Lose!");
+			userStart=0;
+			$('#userscore').html('<h3>' +userStart+ '</h3>');
+			refresh();
+			};
+				
 		};
-
+		//refresh the page
+		function refresh () {
+			userStart=0;
+			randComp = compNumber(22);
+			$("#score").html('<h3>' + randComp+ '</h3>');
 		
+		}
 
 });
 		
