@@ -16,7 +16,7 @@
 
 #score {font-size: 25px;
 		color: white;
-		height: 90px;
+		height: 70px;
 		width: 140px;
 		background-color: green;
 
@@ -25,13 +25,13 @@
 
 #userscore {font-size: 25px;
 		color: white;
-		height: 90px;
+		height: 70px;
 		width: 140px;
 		background-color: purple;
 }
 
 #wins-loses {width: 140px;
-			height: 50px;
+			height: 70px;
 			background-color: blue;
 
 }
@@ -53,4 +53,17 @@ text-decoration: underline;
 #userscore {text-align: center;
 			font-size: 80px;
 
+}
+
+footer {text-align: center;
+	background-color: black;
+	color: white;
+}
+
+#wins {color: white;
+
+}
+
+#loses {
+	color: white;
 }

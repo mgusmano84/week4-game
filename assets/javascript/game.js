@@ -3,10 +3,8 @@
 $(document).ready(function () {
 
 
-	
-
-		var wins = 0;
-		var loses= 0;
+		var wins1 = 0;
+		var loses1= 0;
 		var userStart = 0;
 		randomCrystalScore1 = (Math.floor(Math.random() * 12));
 		randomCrystalScore2 = (Math.floor(Math.random() * 12));
@@ -22,36 +20,58 @@ $(document).ready(function () {
 		$('#userscore').html('<h3>' +userStart+ '</h3>');
 
 
-
-
-		
-					
+			
 		//clicking event for each gem initiated
 
 		$(".gem1").on("click", function () {
 			userStart += randomCrystalScore1;
-			$('#userscore').html('<h3>' +userStart+ '</h3>')
+			$('#userscore').html('<h3>' +userStart+ '</h3>');
+			winOrLose()
 		});
 		$(".gem2").on("click", function () {
 			userStart += randomCrystalScore2;
-			$('#userscore').html('<h3>' +userStart+ '</h3>')
+			$('#userscore').html('<h3>' +userStart+ '</h3>');
+			winOrLose()
 		});
 		$(".gem3").on("click", function () {
 			userStart += randomCrystalScore3;
-			$('#userscore').html('<h3>' +userStart+ '</h3>')
+			$('#userscore').html('<h3>' +userStart+ '</h3>');
+			winOrLose()
 		});
 		$(".gem4").on("click", function () {
 			userStart += randomCrystalScore4;
-			$('#userscore').html('<h3>' +userStart+ '</h3>')
+			$('#userscore').html('<h3>' +userStart+ '</h3>');
+			winOrLose()
 		});
 		
+		//wins and loses filler
+		$('#wins').html("<h4>" + wins1 + "</h4>")
+		$('#loses').html("<h4>" + loses1 + "</h4>")
 
 
-		// }),
+		//determine if win or lose
+		function winOrLose() {
+			if (userStart == randComp) {wins1++;
+			$('#wins').html("<h4>" + wins1 + "</h4>")};
+			refresh()
+
+			if (userStart > randComp) {loses1++;
+			$('#loses').html("<h4>" + loses1 + "</h4>")};
+			refresh()
+		};
+
+		
+
+});
 		
 
 
-		// sets up game	
+
+	
+	
+
+
+// sets up game	
 		// setupGame: function () {
 
 		// 	this.complete =  false;
@@ -65,20 +85,6 @@ $(document).ready(function () {
 		// 	this.hitPoints3 = randomCrystalScore3;
 		// 	this.hitPoints4 = randomCrystalScore4;
 		// },
-		
-
-	
-
-});
-		
-	// 	//determine if win or lose
-	// 	winLose: function () {
-	// 		if (computerStart == 0) {win++}
-	// 		else (computerStart < 0) {loses--}
-	// 	}
-	// }
-
-
 
 	//This is the selection of 4 crystals
 		// CrystalsMain : [
