@@ -1,4 +1,5 @@
 .head	{height: 150px;
+		background-color: lightblue;
 
 }
 
@@ -11,4 +12,20 @@
 
 .container-fluid {
 	background-color: yellow;
+}
+
+#score {font-size: 25px;
+		color: white;
+		height: 90px;
+		width: 140px;
+		background-color: green;
+
+
+}
+
+#userscore {font-size: 25px;
+		color: white;
+		height: 90px;
+		width: 140px;
+		background-color: purple;
 }
