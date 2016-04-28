@@ -12,30 +12,13 @@ $(document).ready(function () {
 		randomCrystalScore2 = (Math.floor(Math.random() * 12));
 		randomCrystalScore3 = (Math.floor(Math.random() * 12));
 		randomCrystalScore4 = (Math.floor(Math.random() * 12));
-		//This is the selection of 4 crystals
-		// CrystalsMain : [
-		// 	crystal1 = {
-		// 		startPoints: 0,
-		// 		hitPoints1: 0},
-		// 	crystal2 = {
-		// 		startPoints: 0,
-		// 		hitPoints2: 0},			
-		// 	crystal3 = {
-		// 		startPoints: 0,
-		// 		hitPoints3: 0},
-		// 	crystal4 = {
-		// 		startPoints: 0,
-		// 		hitPoints4: 0}
-		// ],
+	
 
 		function compNumber(num) {
-			return Math.floor(Math.random() * 26 +num)
+			return Math.floor(Math.random() * 26 + num)
 		};
 		var randComp = compNumber(25);
 		$('#score').html('<h3>' + randComp+ '</h3>');
-		console.log(randComp);
-
-
 		$('#userscore').html('<h3>' +userStart+ '</h3>');
 
 
@@ -84,23 +67,6 @@ $(document).ready(function () {
 		// },
 		
 
-
-		// //How the score is caluclated when a crystal is picked
-		// startScore: function (numberChoice) {
-		// 				$( ".crystal1" ).click(function() {
-		// 	  alert( "I think unicorns are kick ass!" );
-		// 	});
-		// 	$( ".crystal2" ).click(function() {
-		// 	  alert( "I think unicorns are kick ass!" );
-		// 	});
-		// 	$( ".crystal3" ).click(function() {
-		// 	  alert( "I think unicorns are kick ass!" );
-		// 	});
-		// 	$( ".crystal4" ).click(function() {
-		// 	  alert( "I think unicorns are kick ass!" );
-		// 	});
-			
-		// 	computerStart - hitPoints1 || computerStart - hitPoints2 computerStart - hitPoints3 || computerStart - hitPoints4; 
 	
 
 });
@@ -113,6 +79,22 @@ $(document).ready(function () {
 	// }
 
 
+
+	//This is the selection of 4 crystals
+		// CrystalsMain : [
+		// 	crystal1 = {
+		// 		startPoints: 0,
+		// 		hitPoints1: 0},
+		// 	crystal2 = {
+		// 		startPoints: 0,
+		// 		hitPoints2: 0},			
+		// 	crystal3 = {
+		// 		startPoints: 0,
+		// 		hitPoints3: 0},
+		// 	crystal4 = {
+		// 		startPoints: 0,
+		// 		hitPoints4: 0}
+		// ],
 
 // crystalGame.setupGame();
 
